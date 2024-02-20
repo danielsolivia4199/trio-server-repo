@@ -1,0 +1,145 @@
+[
+  {
+    "model": "trioapi.task",
+    "pk": 1,
+    "fields": {
+      "user": 1,
+      "category": 1,
+      "task": "Run 3 miles with friend",
+      "difficulty": 2,
+      "repeat": false,
+      "trio": false,
+      "complete": false
+    }
+  },
+  {
+    "model": "trioapi.task",
+    "pk": 2,
+    "fields": {
+      "user": 1,
+      "category": 2,
+      "task": "Read new book on technology",
+      "difficulty": 1,
+      "repeat": false,
+      "trio": false,
+      "complete": false
+    }
+  },
+  {
+    "model": "trioapi.task",
+    "pk": 3,
+    "fields": {
+      "user": 1,
+      "category": 3,
+      "task": "Practice guitar for 1 hour",
+      "difficulty": 2,
+      "repeat": false,
+      "trio": false,
+      "complete": false
+    }
+  },
+  {
+    "model": "trioapi.task",
+    "pk": 4,
+    "fields": {
+      "user": 1,
+      "category": 4,
+      "task": "Save 10% of monthly earnings",
+      "difficulty": 3,
+      "repeat": false,
+      "trio": false,
+      "complete": false
+    }
+  },
+  {
+    "model": "trioapi.task",
+    "pk": 5,
+    "fields": {
+      "user": 1,
+      "category": 5,
+      "task": "Schedule dinner with friends",
+      "difficulty": 1,
+      "repeat": false,
+      "trio": false,
+      "complete": false
+    }
+  },
+  {
+    "model": "trioapi.task",
+    "pk": 6,
+    "fields": {
+      "user": 1,
+      "category": 6,
+      "task": "Volunteer at local community center",
+      "difficulty": 2,
+      "repeat": false,
+      "trio": false,
+      "complete": false
+    }
+  },
+  {
+    "model": "trioapi.task",
+    "pk": 7,
+    "fields": {
+      "user": 1,
+      "category": 7,
+      "task": "Attend professional networking event",
+      "difficulty": 3,
+      "repeat": false,
+      "trio": false,
+      "complete": false
+    }
+  },
+  {
+    "model": "trioapi.task",
+    "pk": 8,
+    "fields": {
+      "user": 1,
+      "category": 8,
+      "task": "Organize and clean the garage",
+      "difficulty": 1,
+      "repeat": false,
+      "trio": false,
+      "complete": false
+    }
+  },
+  {
+    "model": "trioapi.task",
+    "pk": 9,
+    "fields": {
+      "user": 1,
+      "category": 9,
+      "task": "Explore a new hobby or activity",
+      "difficulty": 2,
+      "repeat": false,
+      "trio": false,
+      "complete": false
+    }
+  },
+  {
+    "model": "trioapi.task",
+    "pk": 10,
+    "fields": {
+      "user": 1,
+      "category": 1,
+      "task": "Run 5 miles",
+      "difficulty": 3,
+      "repeat": true,
+      "trio": false,
+      "complete": false
+    }
+  },
+  {
+    "model": "trioapi.task",
+    "pk": 11,
+    "fields": {
+      "user": 1,
+      "category": 1,
+      "task": "Complete a 30-day fitness challenge",
+      "difficulty": 3,
+      "repeat": false,
+      "trio": false,
+      "complete": false
+    }
+  }
+]

@@ -1,0 +1,92 @@
+[
+  {
+    "model": "trioapi.category",
+    "pk": 1,
+    "fields": {
+      "category_name": "Health",
+      "goal_description": "Your well-being matters. Set a goal related to physical activity, nutrition, mental health, or sleep.",
+      "task_description": "Easy: Walk for 10 minutes, Medium: Prepare a healthy meal from scratch, Hard: Go to fitness class",
+      "active": true
+    }
+  },
+  {
+    "model": "trioapi.category",
+    "pk": 2,
+    "fields": {
+      "category_name": "Education",
+      "goal_description": "Learning never stops. Whether it's pursuing a degree, learning a new skill, or reading more books, outline your educational aspirations here.",
+      "task_description": "Easy: Watch a documentary on a topic of interest, Medium: Read a book on a new subject, Hard: Apply for class at local community college",
+      "active": true
+    }
+  },
+  {
+    "model": "trioapi.category",
+    "pk": 3,
+    "fields": {
+      "category_name": "Hobby",
+      "goal_description": "What do you love doing in your free time? Set a goal to explore new hobbies or dedicate time to current ones.",
+      "task_description": "Easy: Dedicate an hour to your hobby, Medium: Complete a small project or artwork, Hard: Learn a new skill related to your hobby",
+      "active": true
+    }
+  },
+  {
+    "model": "trioapi.category",
+    "pk": 4,
+    "fields": {
+      "category_name": "Finance",
+      "goal_description": "Financial health is key. Plan your savings, budgeting, investing, or debt reduction goals.",
+      "task_description": "Easy: Set up a savings goal for something specific,Medium: Review your last month's expenses, Hard: Plan a no-spend day",
+      "active": true
+    }
+  },
+  {
+    "model": "trioapi.category",
+    "pk": 5,
+    "fields": {
+      "category_name": "Relationship",
+      "goal_description": "Personal connections enrich our lives. Set a goal to strengthen relationships with family, friends, or partners.",
+      "task_description": "Easy: Reach out to an old friend or family member, Medium: Write a letter to someone special, Hard: Plan a quality time activity with a loved one",
+      "active": true
+    }
+  },
+  {
+    "model": "trioapi.category",
+    "pk": 6,
+    "fields": {
+      "category_name": "Community",
+      "goal_description": "Giving back is rewarding. Consider a goal related to volunteering, community service, or social engagement.",
+      "task_description": "Easy: Donate items you to a local charity,Medium: Attend a community meeting or event, Hard: Volunteer for a community project or initiative",
+      "active": true
+    }
+  },
+  {
+    "model": "trioapi.category",
+    "pk": 7,
+    "fields": {
+      "category_name": "Career",
+      "goal_description": "Ambitions drive us forward. Define a professional development goal, job aspiration, or business idea.",
+      "task_description": "Easy: Update your Linked-In profile or resume,Medium: Set a career goal for the next 6 months, Hard: Ask for feedback from colleagues or a supervisor",
+      "active": true
+    }
+  },
+  {
+    "model": "trioapi.category",
+    "pk": 8,
+    "fields": {
+      "category_name": "Cleanliness/Upkeep",
+      "goal_description": "A tidy space reflects a tidy mind. Set a goal for home organization, cleaning schedules, or personal upkeep.",
+      "task_description": "Easy: Declutter a specific area, like a desk or drawer, Medium: Do a deep cleaning of one room in your home,Hard: Organize or declutter a challenging area, such as a garage or attic",
+      "active": true
+    }
+  },
+  {
+    "model": "trioapi.category",
+    "pk": 9,
+    "fields": {
+      "category_name": "Misc",
+      "goal_description": "Didn't find a category that resonates with your aspirations? No problem — this is your space to introduce a goal that truly reflects your vision. Simply add your unique goal below.",
+      "task_description": "Input your specific tasks here",
+      "active": true
+    }
+  }
+]
