@@ -1,5 +1,6 @@
 from django.http import HttpResponseServerError
 from django.db import transaction
+from django.shortcuts import get_object_or_404
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import status
@@ -27,9 +28,9 @@ class JournalView(ViewSet):
     
     def create(self, request):
         """Handle POST operations for Journal, including setting hardest_tasks."""
-        with transaction.atomic():
-            user = User.objects.get(pk=request.data["user"])
-            goal = Goal.objects.get(pk=request.data["goal"])
+        try:
+            user = get_object_or_404(User, pk=request.data["user"])
+            goal = get_object_or_404(Goal, pk=request.data["goal"])
 
             journal = Journal.objects.create(
                 user=user,
@@ -42,9 +43,13 @@ class JournalView(ViewSet):
             )
 
             hardest_tasks_ids = request.data.get("hardestTasks", [])
-            for task_id in hardest_tasks_ids:
-                task = Task.objects.get(pk=task_id)
-                JournalTasks.objects.create(journal=journal, task=task)
-
+            if hardest_tasks_ids:
+                tasks = Task.objects.filter(pk__in=hardest_tasks_ids)
+                journal_tasks = [JournalTasks(journal=journal, task=task) for task in tasks]
+                JournalTasks.objects.bulk_create(journal_tasks)  
+                
             serializer = JournalSerializer(journal, context={'request': request})
             return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+        except Exception as e:
+            return Response({'error': str(e)}, status=status.HTTP_400_BAD_REQUEST)

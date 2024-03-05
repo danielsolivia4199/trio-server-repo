@@ -11,4 +11,3 @@ class Task(models.Model):
     trio = models.BooleanField()
     complete = models.BooleanField()
 
-  

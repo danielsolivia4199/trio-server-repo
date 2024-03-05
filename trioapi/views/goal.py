@@ -1,4 +1,5 @@
 from django.http import HttpResponseServerError
+from django.shortcuts import get_object_or_404
 from django.utils import timezone
 from rest_framework.viewsets import ViewSet
 from rest_framework.decorators import action
@@ -57,18 +58,22 @@ class GoalView(ViewSet):
         return Response(serializer.data)
     
     def update(self, request, pk):
-        """Handle PUT requests for a goal, allowing only the goal field to be updated.
+        """Handle PUT requests for a goal, allowing the goal and goal_created fields to be updated.
 
         Returns:
             Response -- Empty body with 204 status code
         """
-        try:
-            goal = Goal.objects.get(pk=pk)
-            goal.goal = request.data.get("goal", goal.goal)
-            goal.save()
-            return Response(None, status=status.HTTP_204_NO_CONTENT)
-        except Goal.DoesNotExist:
-            return Response({'error': 'Goal not found'}, status=status.HTTP_404_NOT_FOUND)
+        goal = get_object_or_404(Goal, pk=pk)
+        goal.goal = request.data.get("goal", goal.goal)
+
+        goal_created = request.data.get("goal_created")
+        if goal_created is not None: 
+            goal.goal_created = goal_created
+        elif 'goal_created' in request.data and goal_created == '':
+            goal.goal_created = None 
+
+        goal.save()
+        return Response(None, status=status.HTTP_204_NO_CONTENT)
     
     @action(methods=['post'], detail=True, url_path='complete-goal')
     def complete_goal(self, request, pk=None):

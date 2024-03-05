@@ -1,9 +1,9 @@
 [
   {
     "model": "trioapi.journal",
-    "pk": 1,
+    "pk": 2,
     "fields": {
-      "goal": 1,
+      "goal": 3,
       "user": 1,
       "initial_thoughts": "Excited to start this journey",
       "learned": "The importance of setting clear, achievable goals",
@@ -14,26 +14,26 @@
   },
   {
     "model": "trioapi.journaltasks",
-    "pk": 1,
+    "pk": 4,
     "fields": {
-      "journal": 1,
-      "task": 11
+      "journal": 2,
+      "task": 1
     }
   },
   {
     "model": "trioapi.journaltasks",
-    "pk": 2,
+    "pk": 5,
     "fields": {
-      "journal": 1,
+      "journal": 2,
       "task": 10
     }
   },
   {
     "model": "trioapi.journaltasks",
-    "pk": 3,
+    "pk": 6,
     "fields": {
-      "journal": 1,
-      "task": 1
+      "journal": 2,
+      "task": 11
     }
   }
 ]
